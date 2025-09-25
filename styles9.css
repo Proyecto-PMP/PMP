@@ -1,0 +1,475 @@
+/* ======= ESTILOS GENERALES ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fffbd7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ======= ENCABEZADO ======= */
+header {
+    background-color: #a3d8f4;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* ======= MENÚ DE NAVEGACIÓN (CINTA DESLIZANTE) ======= */
+.slider-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.slider-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-menu ul li a:hover {
+    background-color: #ffaaa5;
+    color: white;
+}
+
+/* ======= SECCIÓN QUIÉNES SOMOS ======= */
+.quienes-somos {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 17px rgba(0, 0, 0, 0.1);
+}
+
+.quienes-somos h2 {
+    font-size: 2rem;
+    color: #066a7c;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.quienes-somos p {
+    margin-bottom: 12px;
+    color: #555;
+    text-align: justify;
+}
+
+/* ======= SECCIÓN INTEGRANTES ======= */
+
+.integrantes {
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.integrantes h2 {
+    font-size: 2rem;
+    color: #ff7e6b;
+    margin-bottom: 15px;
+}
+
+.tarjetas-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+#ultimo {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px; /* Tamaño fijo de la tarjeta */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ultimo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* ======= SECCIÓN VIDEOTUTORIALES ======= */
+.videotutoriales {
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.videotutoriales h2 {
+    color: #ff7e6b;
+    margin-bottom: 15px;
+}
+
+.videos {
+    display: grid;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;   /* Centra verticalmente */
+}
+
+.video iframe {
+    width: 480px;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+}
+
+/* ======= SECCIÓN RECURSOS ======= */
+.recursos a {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.recursos a {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(255, 65, 108, 0.5);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover */
+.recursos a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(255, 75, 43, 0.6);
+}
+
+/* Efecto "onda brillante" al pasar el mouse */
+.recursos a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.recursos a:hover:before {
+  left: 120%;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+  .recursos a {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
+
+.recursos {
+    max-width: 900px;
+    text-align: center;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.recursos h2 {
+    text-align: center;
+    color: #ff7e6b;
+    margin-bottom: 15px;
+}
+
+.recursos ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recursos ul li {
+    margin: 10px 0;
+}
+
+.recursos ul li a {
+    text-decoration: none;
+    color: #0077b6;
+    transition: color 0.3s ease;
+}
+
+.recursos ul li a:hover {
+    color: #ff7e6b;
+}
+
+/* ======= FOOTER ======= */
+.footer {
+    background-color: #a3d8f4;
+    padding: 25px 20px;
+    margin-top: 40px;
+    text-align: center;
+    color: #333;
+}
+
+.footer-info {
+    margin-bottom: 10px;
+}
+
+.footer-info a {
+    color: #0077b6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #ff7e6b;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ======= RESPONSIVIDAD ======= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slider-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .quienes-somos,
+    .recursos {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+/* ===== ANIMACIONES DE APARICIÓN ===== */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+section.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== ESTILO DEL MENÚ ACTIVO ===== */
+.slider-menu a.activo {
+    background-color: #ffaaa5;
+    color: white;
+    border-radius: 8px;
+}
+/* === CONTENEDOR PRINCIPAL DEL CARRUSEL === */
+.carousel-container {
+  position: relative;
+  width: 95%;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+
+  /* Imagen de fondo más pequeña con transparencia */
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), /* capa blanca transparente */
+    url("img/png-clipart-logo-sena-white-color-curso-angle-white.png");
+  background-size: 325px 305px;   /* tamaño exacto */
+  background-repeat: no-repeat;   /* que no se repita */
+  background-position: center;    /* centrada */
+  background-attachment: scroll;  /* se mueve con el carrusel */
+
+  padding: 20px;
+}
+
+/* === PISTA DEL CARRUSEL === */
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* === CADA ITEM DEL CARRUSEL === */
+.carousel-item {
+  min-width: 100%;
+  text-align: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease;
+
+  /* Fondo sutil para que el texto siga siendo legible */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+
+/* === ANIMACIÓN DE ENTRADA === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+    /* === IMÁGENES REDONDAS CON MARCO 3D === */
+    .carousel-item img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 8px solid #0077ff;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 
+                  inset 0 0 12px rgba(255, 255, 255, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto al pasar el mouse */
+    .carousel-item img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 12px 35px rgba(57, 149, 255, 0.6);
+    }
+
+    /* === NOMBRE DEL INTEGRANTE === */
+    .carousel-item h3 {
+      font-size: 28px;
+      color: #0d1b2a;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* === DESCRIPCIÓN === */
+    .carousel-item p {
+      font-size: 20px;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* === BOTONES DE NAVEGACIÓN === */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-20%);
+      background: linear-gradient(135deg, #65f8f1, #0054b3);
+      border: none;
+      color: rgba(255, 255, 255, 0.658);
+      font-size: 28px;
+      cursor: pointer;
+      padding: 14px 18px;
+      border-radius: 50%;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, background 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      transition: transform 0.7s ease, background 0.3s ease;
+      transform: scale(1.10);
+      background: linear-gradient(135deg, #73b3fd, #003d82);
+    }
+
+    .prev-btn {
+      left: 15px;
+    }
+
+    .next-btn {
+      right: 15px;
+    }
+
+    /* === PUNTOS DE NAVEGACIÓN === */
+    .carousel-indicators {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      height: 14px;
+      width: 14px;
+      margin: 5px;
+      background-color: #c0c0c0be;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .dot.active {
+      background-color: #0077ff;
+      transform: scale(1.2);
+      box-shadow: 0 0 12px rgba(0, 119, 255, 0.7);
+    }
+  

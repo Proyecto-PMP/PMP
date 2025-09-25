@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles11.css" />
+    <link
+      rel="icon"
+      href="img/IMG-20250608-WA0574-removebg-preview.png"
+      type="image/png"
+    />
+    
+    <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif; /* Fuentes comunes */
+    }
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif; /* Fuente elegante */
+    }
+    p {
+      font-family: Verdana, sans-serif; /* Fuente clara para párrafos */
+    }
+  </style>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio (PMP)</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f3f3f3;
+      min-height: 100vh;
+    }
+
+    /* Contenedor de los logos en columna a la izquierda */
+    .logos-izquierda {
+      position: absolute; /* fijo en la pantalla */
+      top: 50%;           /* en el centro vertical */
+      left: 20px;         /* pegado a la izquierda */
+      transform: translateY(-50%); /* ajuste perfecto al centro */
+      display: flex;
+      flex-direction: column; /* en columna */
+      gap: 20px; /* espacio entre logos */
+      z-index: 10; /* siempre encima del carrusel */
+    }
+
+    .logo-box {
+      width: 120px;
+      height: 120px;
+      border: 3px solid #333;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      animation: float 3s ease-in-out infinite;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo-box img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Animación flotante */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .logo1 { animation-delay: 0s; }
+    .logo2 { animation-delay: 0.5s; }
+    .logo3 { animation-delay: 1s; }
+  </style>
+</head>
+<body>
+  
+  <!-- Logos alineados en columna izquierda al centro -->
+  <div class="logos-izquierda">
+    <div class="logo-box logo1">
+      <img src="img/logo1.PNG" alt="Logo 1">
+    </div>
+    <div class="logo-box logo2">
+      <img src="img/logo 2.jpg" alt="Logo 2">
+    </div>
+    <div class="logo-box logo3">
+      <img src="img/logo 3.jpeg" alt="Logo 3">
+    </div>
+  </div>
+
+</body>
+    <title>Inicio</title>
+    <header>
+          <!-- ===== TÍTULO ANIMADO ===== -->
+    <div class="titulo-container">
+      <h1 class="titulo-proyecto"> 
+        PROYECTO DE MANTENIMIENTO PREVENTIVO (PMP)</h1>
+    </div>
+    </header>
+  </head>
+  <body>
+    <!-- ===== LOADER ELEGANTE ===== -->
+    <div class="loader-wrapper">
+      <img
+        src="img/IMG-20250608-WA0574-removebg-preview.png"
+        alt="Logo"
+        class="loader-logo"
+      />
+      <div class="loader">
+        <span></span>
+      </div>
+      <p class="loader-text">Cargando...</p>
+    </div>
+    <!-- ===== CARRUSEL ===== -->
+    <div class="carousel">
+      <div class="track">
+        <!-- VAGÓN 1 -->
+        <div class="car">
+          <div class="car-content">
+            <h2 style="font-size:55px;" >
+              ¿QUIENES SOMOS?</h2>
+            <p style="font-size:25px;"
+              <strong></strong> UNA PLATAFORMA DEDICADA A BRINDARTE INFORMACIÓN CLARA Y
+PRÁCTICA SOBRE TECNOLOGÍA, MANTENIMIENTO DE EQUIPOS Y RECURSOS
+DIGITALES.
+            </p>
+            <a href="index9.html" class="view-more-btn">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- VAGÓN 2 -->
+        <div class="car">
+          <div class="car-content">
+            <h2 style="font-size:55px;" >
+              PARTES DE UNA PC  💻</h2>
+            <p style="font-size:25px;"
+              <strong></strong>
+              EXPLORA EN DETALLE CADA COMPONENTE DE TU COMPUTADORA, SU FUNCIÓN Y
+CÓMO TRABAJAN EN CONJUNTO PARA OFRECERTE EL MEJOR RENDIMIENTO
+POSIBLE.
+            </p>
+            <a href="index3.html" class="view-more-btn">Ver Partes</a>
+          </div>
+        </div>
+
+        <!-- VAGÓN 3 -->
+        <div class="car">
+          <div class="car-content">
+            <h2 style="font-size:55px;" >
+              HERRAMIENTAS DE MANTENIMIENTO 🔧</h2>
+            <p style="font-size:25px;"
+              <strong></strong>
+              CONOCE LAS HERRAMIENTAS BÁSICAS Y AVANZADAS QUE NECESITAS PARA
+REALIZAR UN MANTENIMIENTO CORRECTO A TU PC. MANTÉN TU EQUIPO EN
+PERFECTO ESTADO.
+            </p>
+            <a href="index4.html" class="view-more-btn">Ver Herramientas</a>
+          </div>
+        </div>
+
+        <!-- VAGÓN 4 -->
+        <div class="car">
+          <div class="car-content">
+            <h2 style="font-size:55px;" >
+              VIDEOTUTORIALES  📹</h2>
+            <p style="font-size:25px;"
+              <strong></strong>
+              APRENDE DE FORMA RÁPIDA Y SENCILLA CON NUESTROS VIDEOTUTORIALES.
+GUÍAS PRÁCTICAS PARA INSTALAR, REPARAR Y OPTIMIZAR TU COMPUTADORA
+PASO A PASO.
+            </p>
+            <a href="index5.html" class="view-more-btn">Ir a Videotutoriales</a>
+          </div>
+        </div>
+
+        <!-- VAGÓN 5 -->
+        <div class="car">
+          <div class="car-content">
+            <h2 style="font-size:55px;" >
+              HACER TU PDF  📄</h2>
+            <p style="font-size:25px;"
+              <strong></strong>
+              CREA, EDITA Y PERSONALIZA DOCUMENTOS PDF CON NUESTRAS HERRAMIENTAS
+EN LÍNEA. SIMPLIFICA TU TRABAJO Y OBTÉN RESULTADOS PROFESIONALES
+EN SEGUNDOS.
+            </p>
+            <a href="index8.html" class="view-more-btn">Hacer PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTONES DE NAVEGACIÓN -->
+      <button class="btn-nav prev" aria-label="Anterior">❮</button>
+      <button class="btn-nav next" aria-label="Siguiente">❯</button>
+
+      <!-- INDICADORES DE VAGONES -->
+      <div class="dots"></div>
+    </div>
+
+    <script src="script4.js"></script>
+  </body>
+</html>

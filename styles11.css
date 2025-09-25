@@ -1,0 +1,548 @@
+/* REEMPLAZAR ESTA REGLA (busca la que tiene background: var(--bg-body)) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: none; /* <-- cambiado: quitar el gradient aquí */
+    overflow: hidden;
+    color: var(--text-color);
+    animation: fadeInPage 1.2s ease-out forwards;
+}
+
+/*-----HEADER-----*/
+.titulo-container {
+  display: flex;
+  justify-content: center;    /* Centra el texto horizontalmente */
+  align-items: center;        /* Centra el contenido verticalmente dentro del contenedor */
+  position: fixed;            /* Fija el contenedor en la parte superior */
+  top: 0;                     /* Lo pega arriba */
+  left: 0;
+  width: 100%;                /* Que ocupe todo el ancho */
+  height: 120px;              /* Ajusta la altura del header */
+  padding: 0 40px;            /* Espaciado lateral */
+  background-color: #ffffff25; /* Fondo semi-transparente */
+  backdrop-filter: blur(10px); /* El efecto de "vidrio esmerilado" */
+  z-index: 9999;             /* Se asegura de que esté por encima de todo */
+  animation: fadeInZoom 0.8s ease forwards;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante opcional */
+}
+
+/* === ESTILO DEL TEXTO === */
+.titulo-proyecto {
+  font-size: 42px;
+  font-weight: 900;
+  color: #000000d0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid rgba(255, 255, 255, 0.75);
+  width: 0;
+  animation: escribir 5.5s steps(40) 1 forwards, blink 0.7s infinite;
+}
+
+/* === ANIMACIÓN DE ESCRITURA === */
+@keyframes escribir {
+  from { width: 0; }
+  to { width: 78%; }
+}
+
+/* === PARPADEO DEL CURSOR === */
+@keyframes blink {
+  0%, 50% { border-color: rgba(255, 255, 255, 0.9); }
+  51%, 100% { border-color: transparent; }
+}
+
+/* === ANIMACIÓN DE APARICIÓN === */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ======== LOADER ELEGANTE ======== */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* Contenedor del loader */
+.loader {
+    width: 180px;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Barra animada */
+.loader span {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6a88, #ff9a8b, #fad0c4);
+    background-size: 300% 100%;
+    border-radius: 5px;
+    animation: loadingBar 2.5s ease-in-out infinite;
+}
+
+/* Animación de la barra */
+@keyframes loadingBar {
+    0% {
+        width: 0%;
+        background-position: 0% 50%;
+    }
+    50% {
+        width: 100%;
+        background-position: 100% 50%;
+    }
+    100% {
+        width: 0%;
+        background-position: 0% 50%;
+    }
+}
+
+/* Texto debajo del loader */
+.loader-text {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    animation: fadeText 1.8s ease-in-out infinite;
+}
+
+/* Suave parpadeo del texto */
+@keyframes fadeText {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Ocultar el loader cuando termine */
+.loader-wrapper.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ===== IMAGEN DEL LOADER ===== */
+.loader-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInLogo 1.5s ease forwards;
+}
+
+/* Animación suave de la imagen */
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+    :root {
+            --bg-body: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            --carousel-bg: rgba(255, 255, 255, 0.9);
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+            --dot-inactive: rgba(189, 189, 189, 0.7);
+            --dot-active: #81d4fa; /* Un azul claro pastel */
+            --btn-bg: rgba(0, 0, 0, 0.4);
+            --btn-hover-bg: rgba(0, 0, 0, 0.6);
+            --text-color: #111111;
+            --button-text-color: #000000;
+            --accent-color: #045175; /* Para botones de ver más */
+            --transition-speed: 0.8s;
+            --transition-curve: cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--bg-body);
+            overflow: hidden;
+            color: var(--text-color);
+        }
+
+        .carousel {
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            height: 380px;
+            overflow: hidden;
+            border-radius: 25px;
+            background-color: #ffffff25; /* Fondo semi-transparente */
+            backdrop-filter: blur(10px); /* El efecto de "vidrio esmerilado" */
+            box-shadow: 0 15px 30px var(--shadow-dark), 0 5px 10px var(--shadow-light);
+              transition: background 0.8s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-speed) var(--transition-curve);
+        }
+
+        .car {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+            color: #000000;
+            user-select: none;
+            transition: transform 0.6s ease, filter 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .car::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+        }
+
+        .car-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .car h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: rgba(255, 29, 29, 0.774);
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.322);
+        }
+
+        .car p {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+/* reemplaza estos bloques para que sean semi-transparentes */
+.car:nth-child(1) { background: linear-gradient(135deg, rgba(179, 225, 255, 0.267), rgba(129, 212, 250, 0.116)); }
+.car:nth-child(2) { background: linear-gradient(135deg, rgba(255, 204, 249, 0.384), rgba(244, 143, 177, 0.13)); }
+.car:nth-child(3) { background: linear-gradient(135deg, rgba(195, 245, 217, 0.356), rgba(165, 214, 167, 0.205)205); }
+.car:nth-child(4) { background: linear-gradient(135deg, rgba(255, 224, 178, 0.322), rgba(255, 184, 77, 0.212)); }
+.car:nth-child(5) { background: linear-gradient(135deg, rgba(225, 190, 231, 0.253), rgba(206, 147, 216, 0.192)); }
+
+        /* Botón "Ver Más" */
+/* ==== BOTONES DE NAVEGACIÓN ==== */
+.btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    z-index: 15;
+}
+
+/* Hover con zoom y sombra */
+.btn-nav:hover {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón anterior */
+.btn-nav.prev {
+    left: 15px;
+}
+
+/* Botón siguiente */
+.btn-nav.next {
+    right: 15px;
+}
+
+/* Animación de aparición */
+@keyframes fadeInNav {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.5);
+    }
+    to {
+        opacity: 0.7;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+.btn-nav {
+    animation: fadeInNav 0.5s ease forwards;
+}
+
+/* ==== BOTÓN "VER MÁS" CON ANIMACIÓN DE LUZ ==== */
+.view-more-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #47d8fc, #0f46fa);
+    color: #000000;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al pasar el cursor: escala + sombra */
+.view-more-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(145, 189, 250, 0.5);
+}
+
+/* Línea brillante animada */
+.view-more-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.7),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+/* Cuando pasas el mouse, la luz recorre de izquierda a derecha */
+.view-more-btn:hover::before {
+    left: 125%;
+    transition: left 0.6s ease;
+}
+
+
+/* ==== DOTS DEL CARRUSEL ==== */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Dot activo */
+.dots button.active {
+    background-color: #66a6ff;
+    transform: scale(1.2);
+    box-shadow: 0 0 6px #66a6ff;
+}
+
+/* Hover en dots */
+.dots button:hover {
+    background-color: #89f7fe;
+}
+
+/* ======== ANIMACIÓN GLOBAL AL CARGAR LA PÁGINA ======== */
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+        filter: blur(5px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.02);
+        filter: blur(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Aplica la animación al body completo */
+body {
+    animation: fadeInPage 1.2s ease-out forwards;
+}
+
+/* Prevenir parpadeo raro en algunos navegadores */
+html {
+    background-color: #fdfdfd;
+}
+/* ===== TÍTULO DEL PROYECTO PMP ===== */
+.project-title-wrapper {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  overflow: hidden;
+}
+
+.project-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a73e8; /* Azul llamativo */
+  animation: slideIn 2s ease-out, colorChange 5s infinite alternate;
+}
+
+/* Animación de entrada desde la izquierda */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+  0% { color: #1a73e8; }
+  25% { color: #34a853; }
+  50% { color: #fbbc05; }
+  75% { color: #ea4335; }
+  100% { color: #1a73e8; }
+}
+
+/* ---------- Fondo fullscreen (robusto) ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* siempre detrás */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* transición suave */
+  opacity: 1;
+}
+
+/* Clases que usas desde JS: body.bg-1, bg-2, ... */
+body.bg-1::before { background-image: url("img/bg-1.jpg"); }
+body.bg-2::before { background-image: url("img/bg-2.jpg"); }
+body.bg-3::before { background-image: url("img/bg-3.jpg"); }
+body.bg-4::before { background-image: url("img/bg-4.jpg"); }
+body.bg-5::before { background-image: url("img/bg-5.png"); }
+
+/* Fallback / si quieres un gradiente por defecto */
+body:not([class*="bg-"])::before {
+  background: var(--bg-body);
+}
+body::before {
+  background-blend-mode: overlay;
+}
+
+/* Si quieres un efecto fade al cambiar fondo (opcional)
+   puedes bajar la opacidad y volver a 1 en JS para "crossfade". */
+
+/* Animación de entrada para los textos del carrusel */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Aplica animación al contenido del slide */
+.carousel .car h2,
+.carousel .car p,
+.carousel .car .view-more-btn {
+  opacity: 0; /* estado inicial */
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Retrasos para efecto escalonado */
+.carousel .car h2 {
+  animation-delay: 0.2s;
+}
+.carousel .car p {
+  animation-delay: 0.4s;
+}
+.carousel .car .view-more-btn {
+  animation-delay: 0.6s;
+}

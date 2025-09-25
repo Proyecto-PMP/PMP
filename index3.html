@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partes Principales del PC</title>
+    <link rel="stylesheet" href="styles3.css" />
+    <link
+      rel="icon"
+      href="img/IMG-20250608-WA0574-removebg-preview.png"
+      type="image/png"
+    />
+    </head>
+  <body class="p-8">
+    <button class="ribbon-btn" id="menuBtn">📌 Menú</button>
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <a href="index11.html"
+          ><li><span class="emoji">🏠</span> Inicio</li></a
+        >
+        <a href="index9.html"
+          ><li><span class="emoji">❓</span> Quienes somos?</li></a
+        >
+        <a href="index3.html"
+          ><li><span class="emoji">💻</span> Partes de PC</li></a
+        >
+        <a href="index4.html"
+          ><li><span class="emoji">🛠️</span> Herramientas</li></a
+        >
+        <a href="index5.html"
+          ><li><span class="emoji">📷</span> Videotutoriales</li></a
+        >
+        <a href="index8.html"
+          ><li><span class="emoji">📄</span> Genera tu PDF</li></a
+        >
+      </ul>
+    </div>
+
+    <div class="container mx-auto">
+      <header class="text-center mb-12">
+        <h1 class="text-5xl font-extrabold text-blue-400 mb-4 titulo-principal">
+          PARTES PRINCIPALES DEL PC
+        </h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+          En este apartado encontrarás una descripción clara y concisa de los
+          componentes esenciales de un computador, explicados de forma sencilla
+          para facilitar su comprensión.
+        </p>
+      </header>
+
+      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                CPU (Procesador)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Es el cerebro del computador. Realiza todos los cálculos y
+                  procesos lógicos necesarios para ejecutar programas y procesar
+                  información. Su potencia determina la velocidad general del
+                  sistema.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/Procesador (parte).png"
+                    alt="Imagen del CPU"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                RAM (Memoria de Acceso Aleatorio)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Almacena temporalmente los datos de los programas en uso para
+                  un acceso rápido por parte del procesador. Es crucial para la
+                  multitarea y el rendimiento fluido del sistema.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/RAM__Parte_-removebg-preview.png"
+                    alt="Imagen de la RAM"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Placa Madre (Motherboard)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Es el circuito principal donde se conectan todos los
+                  componentes del PC: el CPU, la RAM, las unidades de
+                  almacenamiento, la tarjeta gráfica y otros periféricos.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/motherboard.png"
+                    alt="Imagen de la Placa Madre"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Tarjeta Gráfica (GPU)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Procesa y renderiza imágenes, videos y animaciones. Es
+                  fundamental para videojuegos, diseño gráfico y edición
+                  multimedia, ya que alivia la carga de trabajo del CPU en estas
+                  tareas.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/GPU (Parte).png"
+                    alt="Imagen de la Tarjeta Gráfica"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Almacenamiento (HDD/SSD)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Dispositivo de almacenamiento permanente donde se guardan el
+                  sistema operativo, programas y archivos personales. Los SSD
+                  (unidad de estado sólido) ofrecen velocidades mucho más altas
+                  que los HDD tradicionales.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/HDD vs SSD.png"
+                    alt="Imagen del Almacenamiento"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Fuente de Poder (PSU)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Convierte la corriente alterna (AC) de la toma de pared en
+                  corriente continua (DC) que el PC necesita para funcionar.
+                  Suministra la energía a todos los componentes internos.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/FUENTEDEPODER.webp"
+                    alt="Imagen de la Fuente de Poder"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Gabinete (Caja)
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Es la estructura física que aloja y protege todos los
+                  componentes internos del computador, además de permitir la
+                  correcta ventilación y gestión de cables.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/pccom-bronze-2596171-removebg-preview.png"
+                    alt="Imagen del Gabinete"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Sistema de Refrigeración
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Componentes como ventiladores, disipadores de calor y
+                  refrigeración líquida que se encargan de mantener la
+                  temperatura adecuada en el CPU, GPU y otros componentes.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/650_1200-removebg-preview.png"
+                    alt="Imagen de Sistema de Refrigeración"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="card-wrapper bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl"
+        >
+          <article>
+            <div class="p-6 cursor-pointer" onclick="toggleContent(this)">
+              <h2
+                class="text-2xl font-bold text-blue-300 mb-2 flex justify-between items-center"
+              >
+                Periféricos
+                <span class="flecha">▼</span>
+              </h2>
+              <div class="card-content">
+                <p class="text-gray-400 my-4">
+                  Son los dispositivos externos que interactúan con la
+                  computadora, como el monitor, teclado, ratón, impresoras,
+                  auriculares, etc.
+                </p>
+                <figure class="mt-4 rounded-md overflow-hidden">
+                  <img
+                    src="img/computer-accessories-set-pc-equipment-260nw-2372532743-removebg-preview.png"
+                    alt="Imagen de Periféricos"
+                    class="w-full h-auto object-cover"
+                    onerror="this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagen+no+disponible';"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+      <br />
+      <br />
+      <script src="https://cdn.tailwindcss.com"></script>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-info">
+      <p>
+        ¿Tienes dudas? Contáctanos a:
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=proyectotecnica2025@gmail.com" target="_blank">proyectotecnica2025@gmail.com
+        </a>
+      </p>
+        <p><strong>Canal oficial:</strong> <a href="https://www.youtube.com/@ProyectoPMP" target="_blank">www.youtube.com/mantenimiento</a></p>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2025 Proyecto Mantenimiento Preventivo | Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script>
+      /**
+       * Función para alternar la visibilidad del contenido de la tarjeta,
+       * asegurando que solo un elemento esté abierto a la vez.
+       * @param {HTMLElement} clickedElement El elemento que ha sido clickeado (el div contenedor).
+       */
+      function toggleContent(clickedElement) {
+        const content = clickedElement.querySelector(".card-content");
+        const flecha = clickedElement.querySelector(".flecha");
+
+        // Verifica si el contenido de la tarjeta clicada ya está abierto
+        const isContentOpen = content.classList.contains("show");
+
+        // Cierra todas las demás tarjetas
+        const allContents = document.querySelectorAll(".card-content");
+        const allFlechas = document.querySelectorAll(".flecha");
+
+        allContents.forEach((c) => c.classList.remove("show"));
+        allFlechas.forEach((f) => f.classList.remove("girada"));
+
+        // Si el contenido clicado no estaba abierto, lo abre
+        if (!isContentOpen) {
+          content.classList.add("show");
+          flecha.classList.add("girada");
+        }
+      }
+
+      const menuBtn = document.getElementById("menuBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>

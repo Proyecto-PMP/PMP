@@ -1,0 +1,584 @@
+/* ================================
+   VARIABLES CSS PARA FACILITAR MANTENIMIENTO
+================================ */
+:root {
+  /* Paleta de colores */
+  --primary-blue: #00c9ff;
+  --primary-accent: #00d4ff;
+  --secondary-accent: #ff416c;
+  --secondary-accent-light: #ff4b2b;
+  --text-dark: #222;
+  --text-light: #fff;
+  --text-gray: #444;
+  --text-card-dark: #000000;
+  --bg-gradient-main: linear-gradient(135deg, #fcfbd7, #f8fbff);
+  --bg-gradient-header: linear-gradient(135deg, #061c80c5, #3be2ff);
+  --bg-card: rgba(255, 255, 255, 0.15);
+  --bg-footer: #222;
+
+  /* Sombras y efectos */
+  --shadow-main: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 8px 25px rgba(0, 0, 0, 0.3);
+  --shadow-button: 0 5px 15px rgba(255, 65, 108, 0.5);
+
+  /* Transiciones */
+  --transition-ease: 0.3s ease-in-out;
+}
+
+/* ================================
+   ESTILOS GENERALES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--bg-gradient-main);
+  color: var(--text-dark);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Desactiva animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ================================
+   ENCABEZADO
+================================ */
+header {
+  background: var(--bg-gradient-header);
+  color: var(--text-light);
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  box-shadow: var(--shadow-main);
+  border-block-end: 4px solid var(--primary-accent); /* Propiedad lógica */
+  position: relative;
+  overflow: hidden;
+  animation: fadeInHeader 1.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de brillo dinámico */
+header::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: -150px; /* Propiedad lógica */
+  width: 100px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  animation: shine 4s infinite;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación del brillo que cruza el header */
+@keyframes shine {
+  0% {
+    inset-inline-start: -150px;
+  }
+  50% {
+    inset-inline-start: 120%;
+  }
+  100% {
+    inset-inline-start: 120%;
+  }
+}
+
+/* Efecto hover */
+header:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 84, 179, 0.7);
+}
+
+/* ================================
+   MENÚ DE NAVEGACIÓN
+================================ */
+nav {
+  background-color: #000000bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: var(--transition-ease);
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: var(--primary-blue);
+  inset-inline-start: 0; /* Propiedad lógica */
+  inset-block-end: -6px; /* Propiedad lógica */
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--text-dark);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   SECCIÓN DE TARJETAS
+================================ */
+section {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  content-visibility: auto; /* Optimización de rendimiento */
+  contain-intrinsic-size: 500px;
+}
+
+/* Tarjetas */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición en el estado base */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de la tarjeta */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* Contenido de la tarjeta mejorado */
+.card-content {
+  padding: 20px;
+  /* Aumenta el padding para más espacio interior */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fondo semi-transparente para el contenido */
+  border-radius: 10px;
+  /* Bordes redondeados para que combine con la tarjeta */
+  margin-top: 15px;
+  /* Espacio superior para separarlo de la imagen */
+  text-align: left;
+  /* Alinea el texto a la izquierda para mejor lectura */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* Sombra interna sutil */
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  /* Espacio inferior para separar del párrafo */
+  color: #004d66;
+  /* Un color azul oscuro para mayor contraste */
+  font-size: 1.7rem;
+  /* Aumenta el tamaño de la fuente para el título */
+  font-weight: 700;
+  /* Peso de la fuente para que resalte */
+  text-transform: uppercase;
+  /* Convierte el texto a mayúsculas */
+  letter-spacing: 1px;
+  /* Espaciado entre letras para un look más limpio */
+  border-bottom: 2px solid var(--primary-blue);
+  /* Línea decorativa debajo del título */
+  padding-bottom: 5px;
+}
+
+.card-content p {
+  font-size: px;
+  /* Mantiene el tamaño de la fuente del párrafo */
+  color: #333;
+  /* Un color más oscuro para mayor legibilidad */
+  line-height: 1.5;
+  /* Altura de línea para mejorar la legibilidad */
+  text-align: justify;
+  /* Justifica el texto para una apariencia más formal */
+}
+/* ================================
+   ASIDE CONSEJOS ADICIONALES MEJORADO
+================================ */
+.aside-info {
+  background: linear-gradient(135deg, #6dabb6, #3d94a3);
+  padding: 25px 30px;
+  margin: 40px auto;
+  border-inline-start: 6px solid var(--primary-blue);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 850px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover sutil */
+.aside-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Título con ícono */
+.aside-info h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-black);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Lista mejorada */
+.aside-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.aside-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffffcc;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en cada consejo */
+.aside-info li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Íconos de cada consejo */
+.aside-info li i {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+  min-width: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Pequeña animación al pasar el mouse */
+.aside-info li:hover i {
+  transform: rotate(12deg) scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aside-info {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .aside-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .aside-info li {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
+
+/* ======== ESTILOS PARA LA SECCIÓN EXTRA ======== */
+.extra {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  content-visibility: auto; /* Optimización de rendimiento */
+  contain-intrinsic-size: 400px;
+}
+
+.extra p {
+  color: var(--text-light);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== BOTÓN LLAMATIVO VIDEOTUTORIALES ===== */
+.extra a {
+  text-align: center;
+  margin: 40px 0;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--secondary-accent), var(--secondary-accent-light));
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  box-shadow: var(--shadow-button);
+  transition: var(--transition-ease);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover */
+.extra a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px #ff4b2b99;
+}
+
+/* Efecto "onda brillante" al pasar el mouse */
+.extra a::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: -75px; /* Propiedad lógica */
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-25deg);
+  transition: inset-inline-start 0.5s ease;
+}
+
+.extra a:hover::before {
+  inset-inline-start: 120%; /* Propiedad lógica */
+}
+
+.extra h2 {
+  font-size: 2.2rem;
+  color: var(--text-card-dark);
+  margin-block-end: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Contenedor de las tarjetas */
+.extra-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-block-start: 25px;
+}
+
+/* Estilos individuales de cada tarjeta */
+.extra-card {
+  background: #ffffffd9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.extra-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Imágenes de las tarjetas */
+.extra-card img {
+  width: 120px;
+  height: 120px;
+  margin-block-end: 15px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.extra-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Títulos de las tarjetas */
+.extra-card h3 {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-block-end: 8px;
+}
+
+/* Texto descriptivo */
+.extra-card p {
+  font-size: 0.95rem;
+  color: var(--text-card-dark);
+  line-height: 1.5;
+}
+
+/* ================================
+   PIE DE PÁGINA
+================================ */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-footer);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-block-start: 30px;
+  border-block-start: 3px solid var(--primary-blue);
+}
+
+footer a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  header {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  section {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .aside-info {
+    margin: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+  .extra a {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .extra {
+    padding: 20px 10px;
+  }
+
+  .extra h2 {
+    font-size: 1.7rem;
+  }
+
+  .extra-card img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Botón menú hamburguesa */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  background: var(--text-light);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostrar menú cuando se activa */
+.show-menu {
+  display: block !important;
+}
+
+/* Botón volver arriba */
+.scroll-top {
+  position: fixed;
+  inset-block-end: 20px; /* Propiedad lógica */
+  inset-inline-end: 20px; /* Propiedad lógica */
+  background-color: #89cff0;
+  color: var(--text-light);
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: var(--transition-ease);
+  z-index: 100;
+}
+
+.scroll-top.visible {
+  display: block;
+}
+
+/* Efecto fade-out para transición */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Animación tarjetas */
+.card.active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}

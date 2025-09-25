@@ -1,0 +1,292 @@
+/* Estilos para el diseño general y animación de fondo */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #f7f1e3; /* Fondo base claro */
+}
+
+/* Animación de degradado pastel en el fondo del body */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f52544, #3cf1f1, #f7e335, #18d9f3);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1; /* Mantiene el contenido por encima del fondo */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  flex: 1;
+}
+
+main {
+  flex: 1;
+}
+
+/* Variables CSS para colores pastel y sutiles */
+:root {
+  --pastel-pink: #FFC0CB;
+  --pastel-green: #B0E0E6;
+  --pastel-yellow: #F0E68C;
+  --pastel-blue: #ADD8E6;
+}
+
+/* Estilos de la página principal */
+body {
+  color: #000000; /* Texto más oscuro para mejor contraste */
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Efecto de brillo en el título con colores pastel */
+.titulo-principal {
+  text-shadow: 0 0 15px var(--pastel-pink), 0 0 30px var(--pastel-blue);
+  color: #333;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Estilos para el footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-footer);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-block-start: 30px;
+  border-block-start: 3px solid var(--primary-blue);
+}
+
+footer a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+.footer-info, .footer-copy {
+  margin-bottom: 10px;
+}
+
+/* --- Estilos para Componentes Interactivos --- */
+
+/* Estilo para el botón de menú tipo cinta con colores pastel */
+.ribbon-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1001;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.ribbon-btn:hover {
+  background-color: var(--pastel-blue);
+  transform: scale(1.05) rotate(3deg); /* Efecto de rotación al hacer hover */
+}
+
+/* Estilos para el menú lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+  padding-top: 70px;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.sidebar ul li:hover {
+  background-color: var(--pastel-pink);
+  transform: translateX(-6px) scale(1.02);
+}
+
+.emoji {
+  font-size: 1.3rem;
+}
+
+/* Estilos de la tarjeta */
+.card-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo de la tarjeta más claro */
+  color: #333;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.card-wrapper:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animación de borde en el hover de la tarjeta con colores pastel */
+.card-wrapper:hover::before {
+  content: '';
+  position: absolute;
+  inset: -5px; /* Borde más amplio */
+  border: 4px solid transparent;
+  border-radius: 1rem;
+  background: linear-gradient(45deg, var(--pastel-pink), var(--pastel-blue), var(--pastel-yellow), var(--pastel-green)) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderAnimation 3s infinite linear;
+}
+
+@keyframes borderAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos del contenido de la tarjeta */
+article {
+  background-color: transparent; /* Remueve el fondo para que se vea el del padre */
+}
+
+h2 {
+  color: var(--pastel-pink);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Transición para el contenido del acordeón */
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  padding-top: 0;
+}
+
+.card-content.show {
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 1rem;
+}
+
+/* Animación para la flecha del acordeón */
+.flecha {
+  transition: transform 0.5s ease;
+  animation: bounce 2s infinite;
+  color: var(--pastel-pink);
+}
+
+.flecha.girada {
+  transform: rotate(180deg);
+  animation: none;
+}
+
+/* Animación de rebote para la flecha */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+img {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

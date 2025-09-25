@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herramientas de Mantenimiento Preventivo</title>
+    <link href="styles4.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="img/IMG-20250608-WA0574-removebg-preview.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    
+
+    <header class="header">
+  <h1>HERRAMIENTAS DE MANTENIMIENTO PREVENTIVO</h1>
+  <nav class="nav-bar">
+    <a href="index11.html">INICIO</a>
+    <a href="index9.html">QUIENES SOMOS</a>
+    <a href="index3.html">PARTES DE TU PC</a>
+    <a href="index4.html">HERRAMIENTAS</a>
+    <a href="index5.html">VIDEOTUTORIALES</a>
+    <a href="index8.html">PDF DE TU PC</a>
+  </nav>
+</header>
+
+<style>
+  /* Fuente moderna y consistente */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2937;
+    color: #f0f0f0;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    animation: floatIn 1s ease-out forwards;
+  }
+
+  /* Título elegante: Poppins, negrita y mayúsculas */
+  .header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    animation: floatText 3s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .header h1 {
+      font-size: 4rem;
+    }
+  }
+
+  /* Barra de navegación */
+  .nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-bar a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s, transform 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .nav-bar a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.05);
+  }
+
+  /* Animaciones */
+  @keyframes floatIn {
+    0% { opacity: 0; transform: translateY(-50px) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.header').classList.add('show');
+  });
+</script>
+
+    <section id="herramientas">
+      <!-- Herramientas existentes -->
+      <div class="card">
+        <img
+          src="img/herramientas_basicas-removebg-preview.png"
+          alt="Kit de herramientas"
+        />
+        <div class="card-content">
+          
+
+
+
+
+          <h3 class="subtitulo">Kit de Herramientas Básico</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+         <p class="parrafo-animado">
+  Incluye destornilladores, pinzas, llaves y otras herramientas
+  manuales necesarias para desmontar y montar componentes de hardware.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/brochas-removebg-preview.png" alt="Brochas de limpieza" />
+        <div class="card-content">
+          <h3 class="subtitulo">BROCHAS ANTIESTATICAS</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+ <p class="parrafo-animado">
+  Usadas para remover el polvo de tarjetas, fuentes de poder,
+            ventiladores y demás partes internas sin causar daños.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="img/comprimido-removebg-preview (1) (1) (1).png"
+          alt="Aire comprimido"
+        />
+        <div class="card-content">
+          <h3 class="subtitulo">LATAS DE AIRE COMPRIMIDO</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+  <p class="parrafo-animado">
+ Sirven para soplar polvo en ventiladores, puertos USB y ranuras PCI
+            sin contacto directo.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/pasta-removebg-preview.png" alt="Pasta térmica" />
+        <div class="card-content">
+         <h3 class="subtitulo">PASTA TERMICA</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+     <p class="parrafo-animado">
+   Se aplica entre el procesador y el disipador para mejorar la
+            disipación del calor y evitar sobrecalentamientos.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+         
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="img/multimetro-removebg-preview.png"
+          alt="Multímetro digital"
+        />
+        <div class="card-content">
+          <h3 class="subtitulo">MULIMETRO DIGITAL</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+   <p class="parrafo-animado">
+   Ideal para medir voltajes, continuidad y resistencia en fuentes de
+            poder o cables internos del PC.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/usb-removebg-preview.png" alt="Memoria USB" />
+        <div class="card-content">
+          <h3 class="subtitulo">MEMORIA USB</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+      <p class="parrafo-animado">
+  Contiene herramientas de diagnóstico, antivirus, software de
+            respaldo y utilidades para mantenimiento del sistema.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+        
+        </div>
+      </div>
+
+      <!-- Nuevas herramientas -->
+      <div class="card">
+        <img
+          src="img/guantes-removebg-preview.png"
+          alt="Guantes antiestáticos"
+        />
+        <div class="card-content">
+          <h3 class="subtitulo">GUANTES ANTIESTATICOS</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+     <p class="parrafo-animado">
+ Protegen los componentes internos del equipo evitando descargas
+            eléctricas accidentales y daños en el hardware.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/pulsera (herramienta).jpg" alt="Pulsera antiestática" />
+        <div class="card-content">
+          <h3 class="subtitulo">PULSERA ANTIESTATICAS</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+     <p class="parrafo-animado">
+ Evita descargas de electricidad estática que podrían dañar los
+            componentes sensibles durante el mantenimiento.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/Software-de-diagnostico-removebg-preview.png" alt="Software de diagnóstico" />
+        <div class="card-content">
+          <h3 class="subtitulo">SOFTWARE DE DIAGNOSTICO</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+     <p class="parrafo-animado">
+     Permite analizar el rendimiento del equipo, detectar fallas,
+            verificar la temperatura y hacer mantenimiento preventivo del
+            sistema.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+          
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/disco-duro-externo.jpg" alt="Disco externo" />
+        <div class="card-content">
+          <h3 class="subtitulo">DISCO DURO EXTERNO</h3>
+
+<style>
+  /* Subtítulos consistentes con header */
+  .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;               /* negrita extra */
+    text-transform: uppercase;      /* todo en mayúsculas */
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    color: #3b82f6;                 /* azul moderno */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  }
+
+  @media (min-width: 768px) {
+    .subtitulo {
+      font-size: 2rem;
+    }
+  }
+</style>
+     <p class="parrafo-animado">
+  Sirve para realizar copias de seguridad y proteger tu información
+            antes de hacer reparaciones o formateos.
+</p>
+
+<style>
+  /* Fuente limpia y moderna para párrafos */
+  .parrafo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatMove 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .parrafo-animado {
+      font-size: 1.3rem;
+    }
+  }
+
+  /* Animación de movimiento continuo */
+  @keyframes floatMove {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+         
+        </div>
+      </div>
+    </section>
+
+   <aside class="aside-info" id="consejos">
+  <h2 class="aside-titulo">Consejos Adicionales</h2>
+  <ul class="aside-lista">
+    <li>Realiza mantenimiento preventivo al menos cada 6 meses.</li>
+    <li>Evita usar líquidos directamente sobre los componentes.</li>
+    <li>Siempre desconecta la energía antes de abrir el equipo.</li>
+    <li>Utiliza guantes o pulseras antiestáticas para mayor seguridad.</li>
+    <li>Mantén tus controladores y antivirus actualizados.</li>
+  </ul>
+</aside>
+
+<style>
+  /* Fuente cursiva muy llamativa */
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+  /* Título del aside */
+  .aside-titulo {
+    font-family: 'Dancing Script', cursive;  /* muy cursiva y elegante */
+    font-weight: 700;                        /* negrita */
+    text-transform: uppercase;               /* mayúsculas */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #1e40af;                          /* azul fuerte para contraste */
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    animation: floatH2 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .aside-titulo {
+      font-size: 3rem;
+    }
+  }
+
+  /* Animación del título */
+  @keyframes floatH2 {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Lista del aside */
+  .aside-lista {
+    list-style: disc inside;
+    padding-left: 0;
+  }
+
+  .aside-lista li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #1f2937;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    animation: floatLi 3s ease-in-out infinite alternate;
+  }
+
+  @media (min-width: 768px) {
+    .aside-lista li {
+      font-size: 1.3rem;
+    }
+  }
+
+  @keyframes floatLi {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0px); }
+  }
+</style>
+
+
+    <section class="extra">
+      <h2>Recursos y Videotutoriales</h2>
+      <p  style="color: black">
+        Encuentra más información sobre mantenimiento preventivo en nuestros
+        videotutoriales y guías detalladas para que aprendas paso a paso.
+      </p>
+      <a href="index5.html" class="btn">Ir a Videotutoriales</a>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 General Santander. Todos los derechos reservados.</p>
+      <p>
+        ¿Tienes dudas? Contáctanos a:
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=proyectotecnica2025@gmail.com"
+          target="_blank"
+        >
+          proyectotecnica2025@gmail.com
+        </a>
+      </p>
+    </footer>
+
+    <script src="script3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+/* Importar la fuente Inter de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Estilos base del cuerpo de la página */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f4f8; /* Un fondo más suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    color: #334155; /* Color de texto base */
+}
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1.5rem; /* Esquinas más redondeadas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+/* Animación de entrada para el contenedor */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los títulos y párrafos */
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.header p {
+    font-size: 1.125rem;
+    color: #64748b;
+}
+
+/* Estilo para los apartados (secciones del formulario) */
+.specs-section {
+    background-color: #f8fafc; /* Fondo más claro para las secciones */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specs-section:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+}
+
+.specs-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #334155;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para los campos de entrada */
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4f46e5; /* Color del borde al enfocar */
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); /* Efecto de sombra al enfocar */
+}
+
+/* Estilo para el botón de generación de PDF */
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed); /* Gradiente de color */
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite; /* Animación de pulso */
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(1px); /* Efecto de "presionar" al hacer clic */
+}
+
+/* Animación de pulso para el botón */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); }
+    50% { transform: scale(1.02); box-shadow: 0 6px 15px rgba(79, 70, 229, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); }
+}
+
+/* Estilo para el botón de regreso */
+.btn-secondary {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4f46e5;
+    background-color: #ffffff;
+    border: 1px solid #4f46e5;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #4f46e5;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+}
+
+/* Mensaje de estado (opcional) */
+.status-message {
+    padding: 1rem;
+    background-color: #d1fae5;
+    color: #065f46;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .specs-section h2 {
+        font-size: 1.5rem;
+    }
+}

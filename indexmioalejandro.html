@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laberinto - Mantenimiento Preventivo</title>
+  <link rel="stylesheet" href="stylesmioalejandro.css" />
+</head>
+<body>
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="#" class="logo">🏠 Inicio</a>
+    <a href="#">Página 1</a>
+    <a href="#">Página 2</a>
+    <a href="#">Página 3</a>
+  </nav>
+
+  <header>
+    <h1>Laberinto — Mantenimiento Preventivo</h1>
+    <div class="top-info">
+      <div class="controls">Controles: <strong>Flechas ↑ ↓ ← →</strong></div>
+      <div class="hud">Tiempo: <span id="time">120</span>s — Aciertos: <span id="score">0</span></div>
+    </div>
+  </header>
+
+  <main class="board">
+    <!-- canvas se ajusta desde JS según la grilla -->
+    <canvas id="canvas"></canvas>
+  </main>
+
+  <footer class="actions">
+    <button id="startBtn">▶ Iniciar</button>
+    <button id="restartBtn" disabled>🔄 Reiniciar</button>
+  </footer>
+
+  <!-- Modal pregunta -->
+  <div id="questionModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <h2 id="qTitle">Pregunta</h2>
+      <div id="qOptions" class="options"></div>
+    </div>
+  </div>
+
+  <!-- Overlay resultado -->
+  <div id="resultOverlay" class="overlay hidden">
+    <div class="overlay-card" id="overlayCard">
+      <h2 id="resultTitle"></h2>
+      <p id="resultText"></p>
+    </div>
+  </div>
+
+  <script src="scriptmioalejandro.js"></script>
+</body>
+</html>
